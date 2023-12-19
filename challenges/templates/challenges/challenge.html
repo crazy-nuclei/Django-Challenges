@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} Challenge</title>
+    <style>
+        /* Center the text block */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f7ff;
+            display: flex;
+            flex-direction: column; /* Set flex direction to column */
+        }
+
+        /* Cute font styling */
+        .cute-text {
+            font-size: 2rem; /* Adjust as needed */
+            color: #4a90e2; /* Light blue font color for contrast */
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+            letter-spacing: 2px; /* Spacing between letters */
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'challenges/includes/header.html' %}
+    <div class="cute-text">
+        <h1>{{title}} Challenge</h1>
+        <p>{{text}}</p>
+    </div>
+
+</body>
+
+</html>
+

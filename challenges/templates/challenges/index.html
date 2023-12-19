@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGES APP</title>
+    <style>
+        /* Flexbox to position items */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f7ff;
+            display: flex;
+            flex-direction: column; /* Set flex direction to column */
+        }
+
+        /* Wrapper to hold both containers */
+        .flex-wrapper {
+            display: flex;
+            flex: 1;
+            width: 100%;
+        }
+
+        /* Left side styling for the unordered list */
+        .list-container {
+            flex: 1; 
+            padding: 20px;
+            border-right: 1px solid #d1d1d1;
+            max-width: calc(100% / 3);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            flex-direction: column;
+        }
+
+        .list-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+        }
+
+        .list-container li {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #4a90e2;
+        }
+
+        .list-container a {
+            color: inherit; /* Use the default color (usually blue) */
+            text-decoration: none; /* Underline the link */
+            cursor: pointer; /* Show the pointer cursor on hover */
+        }
+
+        .list-container a:hover {
+            text-decoration: none;
+            color: red /* Remove underline on hover */
+        }
+
+        /* Right side styling for the text block */
+        .text-container {
+            flex: 2;
+            padding: 20px;
+            max-width: calc(2 * 100% / 3);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        .text-container h1 {
+            font-size: 2rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .list-container h1 {
+            color: #4a90e2;
+            margin-bottom: 20px; /* Some space below the heading */
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'challenges/includes/header.html' %}
+    <div class="flex-wrapper">
+        <div class="list-container">
+            <h1>MONTH LIST</h1>
+            <ul>
+                {% for month in months %}
+                    <li><a href="{% url 'monthly-challenge' month %}">{{ month|title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="text-container">
+            <h1>CHALLENGES APP </h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+

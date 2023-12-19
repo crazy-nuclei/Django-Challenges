@@ -1,0 +1,32 @@
+<style>
+    /* Navbar styling */
+    .navbar {
+    padding: 15px 0; /* Increased padding for better spacing */
+    background-color: #c5e3ff; /* Darker shade for the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #a1cbe6; /* Adjusted border color to complement the darker background */
+    }
+
+    .navbar h2 {
+        font-size: 2rem; /* Increased font size */
+        color: #4a90e2;
+        margin: 0; /* Remove default margin */
+        font-weight: 400; /* Reduced font weight */
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: #4a90e2;
+    }
+
+    .navbar a:hover{
+        text-decoration: none;
+        color: #103f74;
+    }
+</style>
+
+<header class="navbar">
+    <h2><a href="{% url 'index' %}">Challenges</a></h2>
+</header>
